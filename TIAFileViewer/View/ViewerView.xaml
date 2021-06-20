@@ -9,10 +9,8 @@
             <RowDefinition Height="90"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <ListBox Height="90" 
-                 HorizontalAlignment="Stretch"
-                 VerticalAlignment="Stretch"
                  ItemsSource="{Binding Types}"
                  SelectedItem="{Binding SelectedType}">
             <ListBox.ItemsPanel>
@@ -41,21 +39,16 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox HorizontalAlignment="Stretch"
-                     VerticalAlignment="Stretch"
-                     Grid.Row="1"
-                     ItemsSource="{Binding ActiveTypeElements}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Label  Content="{Binding Identifier}" 
-                                ContentStringFormat=" {0} |"/>
-
-                        <Label  Content="{Binding NoProperties}" 
-                                ContentStringFormat="Eigenschaften: {0}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding ActiveTypeElements}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name/ ID" 
+                                    Binding="{Binding Identifier}"/>
+                <DataGridTextColumn Header="Eigenschaften (Anzahl)" 
+                                    Binding="{Binding NoProperties}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
