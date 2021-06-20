@@ -6,6 +6,10 @@
              xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
   <Application.Resources>
         <ResourceDictionary>
+            <BitmapImage x:Key="CompareImage" UriSource="Resources/Compare.png" />
+            <BitmapImage x:Key="CsvExportImage" UriSource="Resources/CsvExport.png" />
+            <BitmapImage x:Key="FileOpenImage" UriSource="Resources/FileOpen.png" />
+            <BitmapImage x:Key="SettingsImage" UriSource="Resources/Settings.png" />
         </ResourceDictionary>
   </Application.Resources>
 </Application>

@@ -12,7 +12,7 @@
             <Button Command="{Binding OpenFileCmd}"
                     Margin="0,0,10,0">
                 <Image HorizontalAlignment="Left"  
-                       Source="../Resources/FileOpen.png"/>
+                       Source="{StaticResource FileOpenImage}"/>
             </Button>
 
             <Line   Stretch="Fill" 
@@ -25,19 +25,19 @@
             <Button Command="{Binding OpenSettingsCmd}"
                     Margin="0,0,10,0">
                 <Image HorizontalAlignment="Left"  
-                       Source="../Resources/Settings.png"/>
+                       Source="{StaticResource SettingsImage}"/>
             </Button>
             
             <Button Command="{Binding CompareCmd}"
                     Margin="0,0,10,0">
                 <Image HorizontalAlignment="Left"  
-                       Source="../Resources/Compare.png"/>
+                       Source="{StaticResource CompareImage}"/>
             </Button>
             
             <Button Command="{Binding ExportCSVCmd}"
                     Margin="0,0,10,0">
                 <Image HorizontalAlignment="Left"  
-                       Source="../Resources/CsvExport.png"/>
+                       Source="{StaticResource CsvExportImage}"/>
             </Button>
         </StackPanel>
     </Border>
